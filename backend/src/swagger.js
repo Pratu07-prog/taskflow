@@ -9,9 +9,6 @@ export default {
       name: 'Taskflow API Support'
     }
   },
-  servers: [
-    { url: 'http://localhost:3002', description: 'Local development server' }
-  ],
   tags: [
     { name: 'Auth', description: 'Authentication endpoints' },
     { name: 'Projects', description: 'Project management endpoints' },
