@@ -21,7 +21,8 @@ This submission is for the `Backend Engineer` track, so the deliverable is the A
 
 ### Hosted deployment
 
-- AWS deployment URL: `http://13.236.146.101/docs/`
+- AWS deployment URL: `http://13.236.146.101`
+- SWAGGER DOCUMENTATION: `http://13.236.146.101/docs`
 
 ## 2. Architecture Decisions
 
