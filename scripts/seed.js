@@ -21,8 +21,10 @@ const seed = async () => {
     const seedFile = path.join(SEEDS_DIR, 'seed.sql');
     let sql = fs.readFileSync(seedFile, 'utf8');
 
-    // Hash the placeholder password before seeding
-    // In production, this would be done differently
+    // Replace the placeholder with a real bcrypt hash so seeded login works.
+    const passwordHash = await hashPassword('TestPass123');
+    sql = sql.replace('hashed_password_placeholder', passwordHash);
+
     console.log('Executing seed data...');
     await pool.query(sql);
 
