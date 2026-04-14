@@ -18,9 +18,11 @@ export const initializePool = () => {
     min: env.DB_POOL_MIN,
     max: env.DB_POOL_MAX,
     idleTimeoutMillis: 30000,
-    connectionTimeoutMillis: 5000
+    connectionTimeoutMillis: 5000,
+    ssl: {
+      rejectUnauthorized: false
+    }
   });
-
   console.log(`Host: ${env.DB_HOST}, Port: ${env.DB_PORT}, Database: ${env.DB_NAME}, User: ${env.DB_USER}`);
   pool.on('error', (err) => {
     console.error('Unexpected error on idle client', err);
